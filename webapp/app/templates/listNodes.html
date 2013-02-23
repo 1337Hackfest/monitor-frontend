@@ -1,0 +1,6 @@
+<h2>Nodes:</h2>
+<ul>
+  <% _.each(nodes, function(node){ %>
+    <li><a href="node/<%= node.id %>"><%= node.title %></a></li>
+  <% }); %>
+</ul>
