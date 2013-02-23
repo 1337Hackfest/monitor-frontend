@@ -6,13 +6,17 @@ require.config({
 
   paths: {
     // JavaScript folders.
-    libs: "../scripts/libs",
-    plugins: "../scripts/plugins",
+    libs: "vendor/libs",
+    plugins: "vendor/plugins",
 
     // Libraries.
-    jquery: "../scripts/libs/jquery",
-    lodash: "../scripts/libs/lodash",
-    backbone: "../scripts/libs/backbone"
+    jquery: "vendor/libs/jquery",
+    lodash: "vendor/libs/lodash",
+    backbone: "vendor/libs/backbone",
+    text: "vendor/libs/text",
+
+    //Templates
+    templates: "../templates"
   },
 
   shim: {
@@ -20,10 +24,10 @@ require.config({
     backbone: {
       deps: ["lodash", "jquery"],
       exports: "Backbone"
-    },
+    }
 
     // Backbone.LayoutManager depends on Backbone.
-    "plugins/backbone.layoutmanager": ["backbone"]
+    //"plugins/backbone.layoutmanager": ["backbone"]
   }
 
 });
